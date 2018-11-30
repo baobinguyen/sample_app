@@ -1,33 +1,36 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   'true': 'foo'
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
-
 en:
-  hello: "Hello world"
+  pages:
+    home:
+      heard: "Sample App"
+      home_info: "This is the home page for the"
+      home_info2: "sample application."
+      rails_link: "http://www.railstutorial.org/"
+      rails_link_detail: "Ruby on Rails Tutorial"
+    about:
+      about_head: "About"
+      about_link_detail_heat: "the"
+      about_link: "http://www.railstutorial.org/"
+      about_link_detail: "Ruby on Rails"
+      about_link_book: "http://www.railstutorial.org/book"
+      about_link_book_detail: "book"
+      about_and: "and"
+      about_link_railstutorial: "http://screencasts.railstutorial.org/"
+      about_link_railstutorial_detail: "about_link_railstutorial"
+      about_detail: "to teach web development with"
+      about_link_rubyrials: "http://rubyonrails.org/"
+      about_link_rubyrials_detail: Ruby on Rails
+      about_detail_1: "This is the sample application for the tutorial."
+      about_info: "Tutorial"
+      about_info_2: "is a"
+    help:
+      help_head: "Help"
+      help_info_1: "Get help on the Ruby on Rails Tutorial at the"
+      help_link_1: "http://www.railstutorial.org/help"
+      help_link_info: "Rails Tutorial help section"
+      help_info_2: "To get help on this sample app, see the"
+      help_link_2: href="http://www.railstutorial.org/book"
+      help_link_info_2: "Ruby on Rails Tutorial"
+      help_info_book: "book"
+  helpers:
+    application_helper:
+      application_info: "Ruby on Rails Tutorial Sample App"
