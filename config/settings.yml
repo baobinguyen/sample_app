@@ -3,5 +3,7 @@ user:
   name_length: 50
   email_length: 255
   password_length: 6
+  size_image: 50
+  per_pag: 20
 sessions:
   checked: "1"
