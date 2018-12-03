@@ -10,6 +10,8 @@ en:
     users_controller:
       users_controller_info: "Welcome to the Sample App!"
       error_messages: "the cannot find user"
+    sessions_controller:
+      session_danger: "Invalid email/password combination"
   layouts:
     footer:
       announce_footer_html: "The %{tutorial} by %{book}"
@@ -26,6 +28,11 @@ en:
       heard_info_home: "Home"
       heard_info_help: "Help"
       heard_info_login: "Log in"
+      heard_info_user: "Users"
+      heard_info_Profile: "Profile"
+      heard_info_Settings: "Settings"
+      heard_info_logout: "Log out"
+      heard_info_Account: "Account"
   application_info: "Ruby on Rails Tutorial Sample App"
   pages:
     home:
@@ -83,3 +90,8 @@ en:
       new_Confirmation: "Confirmation"
     create:
       users_controller_info: "Welcome to the Sample App!"
+  sessions:
+    new:
+      title: "Log in"
+      sign_up_html: "New user? %{href}"
+      sign_up_now: "Sign up now!"
