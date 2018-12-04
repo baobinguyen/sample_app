@@ -6,7 +6,7 @@ class StaticPagesControllerTest < ActionDispatch::IntegrationTest
     assert_select "title", "Ruby on Rails Tutorial Sample App"
   end
   test "should get help" do
-    get help_path
+    get helf_path
     assert_response :success
     assert_select "title", "Help | Ruby on Rails Tutorial Sample App"
   end
