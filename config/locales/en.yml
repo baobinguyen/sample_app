@@ -1,4 +1,15 @@
 en:
+  helpers:
+    label:
+      user:
+        name: "Name"
+        email: "Email"
+        password: "Password"
+        password_confirmation: "Confirmation"
+  controller:
+    users_controller:
+      users_controller_info: "Welcome to the Sample App!"
+      error_messages: "the cannot find user"
   layouts:
     footer:
       announce_footer_html: "The %{tutorial} by %{book}"
@@ -15,6 +26,7 @@ en:
       heard_info_home: "Home"
       heard_info_help: "Help"
       heard_info_login: "Log in"
+  application_info: "Ruby on Rails Tutorial Sample App"
   pages:
     home:
       heard: "Welcome to the Sample"
@@ -54,9 +66,20 @@ en:
       contact_info: "Contact the Ruby on Rails Tutorial about the sample app at the"
       contact_link: "http://www.railstutorial.org/contact"
       contact_link_info: "contact page"
-  helpers:
-    application_helper:
-      application_info: "Ruby on Rails Tutorial Sample App"
-  new:
-    new_info: "Sign up"
-    new_info_1: "This will be a signup page for new users."
+    session:
+        email: "Email"
+        password: "Password"
+  shared:
+    form: "The form contains %{error_list}"
+    error:
+      one: "1 error"
+      other: "%{count} errors"
+  users:
+    new:
+      new_info_title: "Sign up"
+      new_info: "Sign up"
+      new_info_1: "This will be a signup page for new users."
+      new_info_2: "Create my account"
+      new_Confirmation: "Confirmation"
+    create:
+      users_controller_info: "Welcome to the Sample App!"
