@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :load_user, only: :show
-  
+
   def show; end
 
   def new
@@ -10,6 +10,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new user_params
     if @user.save
+      log_in @user
       flash[:success] = t ".users_controller_info"
       redirect_to @user
     else
