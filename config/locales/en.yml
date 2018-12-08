@@ -6,12 +6,11 @@ en:
         email: "Email"
         password: "Password"
         password_confirmation: "Confirmation"
+        remember_me: "Remember me"
   controller:
     users_controller:
       users_controller_info: "Welcome to the Sample App!"
       error_messages: "the cannot find user"
-    sessions_controller:
-      session_danger: "Invalid email/password combination"
   layouts:
     footer:
       announce_footer_html: "The %{tutorial} by %{book}"
@@ -73,9 +72,22 @@ en:
       contact_info: "Contact the Ruby on Rails Tutorial about the sample app at the"
       contact_link: "http://www.railstutorial.org/contact"
       contact_link_info: "contact page"
+  helpers:
+    label:
+      user: #model
+        name: "Name"
+        email: "Email"
+        password: "Password"
+        password_confirmation: "Confirmation"
+    sessions:
+      new:
+        email: "Email"
+        password: "Password"
     session:
         email: "Email"
         password: "Password"
+    application_helper:
+      application_info: "Ruby on Rails Tutorial Sample App"
   shared:
     form: "The form contains %{error_list}"
     error:
@@ -90,8 +102,10 @@ en:
       new_Confirmation: "Confirmation"
     create:
       users_controller_info: "Welcome to the Sample App!"
+      error_messages: "Invalid email/password combination"
   sessions:
     new:
       title: "Log in"
       sign_up_html: "New user? %{href}"
       sign_up_now: "Sign up now!"
+      remember_me: "Remember me on this computer"
