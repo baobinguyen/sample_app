@@ -14,11 +14,6 @@ class UserTest < ActiveSupport::TestCase
     assert_not @user.valid?
   end
 
-  test "email should be present" do
-    @user.email = "     "
-    assert_not @user.valid?
-  end
-
   test "email validation should accept valid addresses" do
     valid_addresses = %w(user@example.com USER@foo.COM A_US-ER@foo.bar.org
                          first.last@foo.jp alice+bob@baz.cn)
@@ -60,6 +55,33 @@ class UserTest < ActiveSupport::TestCase
     @user.microposts.create!(content: "Lorem ipsum")
     assert_difference "Micropost.count", -1 do
       @user.destroy
+    end
+  end
+
+  test "should follow and unfollow a user" do
+    michael  = users(:michael)
+    archer   = users(:archer)
+    assert_not michael.following?(archer)
+    michael.follow(archer)
+    assert michael.following?(archer)
+    assert archer.followers.include?(michael)
+    michael.unfollow(archer)
+    assert_not michael.following?(archer)
+  end
+
+  test "feed should have the right posts" do
+    michael = users(:michael)
+    archer  = users(:archer)
+    lana    = users(:lana)
+    lana.microposts.each do |post_following|
+      assert michael.feed.include?(post_following)
+    end
+    michael.microposts.each do |post_self|
+      assert michael.feed.include?(post_self)
+    end
+    # Posts from unfollowed user
+    archer.microposts.each do |post_unfollowed|
+      assert_not michael.feed.include?(post_unfollowed)
     end
   end
 end
