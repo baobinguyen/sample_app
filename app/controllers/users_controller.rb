@@ -1,17 +1,21 @@
 class UsersController < ApplicationController
   before_action :load_user, except: [:index, :new, :create]
-  before_action :logged_in_user, except: [:show, :new, :create]
+  before_action :logged_in_user, except: [:new, :create, :show]
   before_action :correct_user, only: [:edit, :update]
   before_action :admin_user, only: :destroy
 
   def index
-    @users = User.paginate page: params[:page], per_page: Settings.user.per_pag
+    @users = User.paginate page: params[:page],
+      per_page: Settings.user.per_pag
   end
-
-  def show; end
 
   def new
     @user = User.new
+  end
+
+  def show
+    @microposts = @user.microposts.paginate page: params[:page],
+      per_page: Settings.user.per_pag
   end
 
   def create
@@ -38,9 +42,9 @@ class UsersController < ApplicationController
 
   def destroy
     if @user.destroy
-      flash[:success] = t "users.users_controller.user_deleted"
+      flash[:success] = t "controller.users.user_deleted"
     else
-      flash[:warning] = t "users.users_controller.failed"
+      flash[:warning] = t "controller.users.failed"
     end
     redirect_to users_path
   end
