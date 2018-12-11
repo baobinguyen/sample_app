@@ -1,12 +1,12 @@
-<% provide(:title, t(".edit_Edit")) %>
-<% provide(:button_text, t(".edit_Save_changes")) %>
-<h1><%= t(".edit_Update") %></h1>
+<% provide(:title, t(".edit_edit")) %>
+<% provide(:button_text, t(".edit_save_changes")) %>
+<h1><%= t(".edit_update") %></h1>
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
     <%= render "form" %>
     <div class="gravatar_edit">
       <%= gravatar_for @user %>
-      <%= link_to t(".edit_Change"), "http://gravatar.com/emails", target: "_blank" %>
+      <%= link_to t(".edit_change"), "http://gravatar.com/emails", target: "_blank" %>
     </div>
   </div>
 </div>

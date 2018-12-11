@@ -13,8 +13,17 @@ en:
       error_messages: "the cannot find user"
       users_login: "Please log in."
       user_update: "Profile updated"
+      user_check: "Please check your email to activate your account."
     sessions:
-      error_messages: "Invalid email/password combination"      
+      error_messages: "Invalid email/password combination"
+      inactivated: "Account not activated. Check your email for the activation link."
+    account_activations:
+      activated: "Account activated!"
+      inactivated: "Invalid activation link"
+  mailers:
+    user:
+      account_activation: "Account activation"
+      hi: "Hi"
   layouts:
     footer:
       announce_footer_html: "The %{tutorial} by %{book}"
@@ -89,6 +98,12 @@ en:
         password: "Password"
     application_helper:
       application_info: "Ruby on Rails Tutorial Sample App"
+  user_mailer:
+    user: "user #password_reset"
+    Activate: "Activate"
+    title: "Sample App"
+    hi: "Hi"
+    welcom: "Welcome to the Sample App! Click on the link below to activate your account:"
   shared:
     form: "The form contains %{error_list}"
     error:
@@ -98,10 +113,10 @@ en:
     index:
       index_info: "All users"
     edit:
-      edit_Edit: "Edit user"
-      edit_Save_changes: "Save changes"
-      edit_Update: "Update your profile"
-      edit_Change: "Change"
+      edit_edit: "Edit user"
+      edit_save_changes: "Save changes"
+      edit_update: "Update your profile"
+      edit_change: "Change"
     new:
       new_info_title: "Sign up"
       new_info: "Sign up"
