@@ -20,9 +20,22 @@ en:
     account_activations:
       activated: "Account activated!"
       inactivated: "Invalid activation link"
+    password_resets:
+      email_send: "Email sent with password reset instructions"
+      email_not_found: "Email address not found"
+      reset_title: "Password reset"
+      reset_info: "To reset your password click the link below:"
+      reset_password: "Reset password"
+      reset_info_1: "This link will expire in two hours."
+      reset_info_2: "If you did not request your password to be reset, please ignore this email and
+your password will stay as it is."
+      reset_update: "can't be empty"
+      reset_update_flast: "Password has been reset."
+      reset_check_expiration: "Password reset has expired."
   mailers:
     user:
       account_activation: "Account activation"
+      password_reset: "Password reset"
       hi: "Hi"
   layouts:
     footer:
@@ -46,6 +59,16 @@ en:
       heard_info_logout: "Log out"
       heard_info_Account: "Account"
   application_info: "Ruby on Rails Tutorial Sample App"
+  password_resets:
+    new:
+      email: "Email"
+      title_info: "Forgot password"
+      submit: "Submit"
+    edit:
+      edit_title: "Reset password"
+      password: "Password"
+      password_confirmation: "Password confirmation"
+      edit_submit: "Update password"
   pages:
     home:
       heard: "Welcome to the Sample"
@@ -96,7 +119,7 @@ en:
       new:
         email: "Email"
         password: "Password"
-    application_helper:
+        forgot_password: "(forgot password)"
       application_info: "Ruby on Rails Tutorial Sample App"
   user_mailer:
     user: "user #password_reset"
@@ -138,4 +161,15 @@ en:
       new_lable_password_confirmation: "password_confirmation"
     users_controller:
       user_deleted: "users delete"
-      failed: "Error: cannot delete" 
+      failed: "Error: cannot delete"
+  user_mailer:
+    account_reset:
+     password_reset_info: "To reset your password click the link below:"
+     password_reset_info_2: "This link will expire in two hours."
+     password_reset_info_3: "If you did not request your password to be reset, please ignore this email and
+your password will stay as it is."
+    account_activation:
+      Activate: "Activate"
+      title: "Sample App"
+      hi: "Hi"
+      welcom: "Welcome to the Sample App! Click on the link below to activate your account:"
