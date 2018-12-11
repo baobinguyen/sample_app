@@ -8,9 +8,13 @@ en:
         password_confirmation: "Confirmation"
         remember_me: "Remember me"
   controller:
-    users_controller:
+    users:
       users_controller_info: "Welcome to the Sample App!"
       error_messages: "the cannot find user"
+      users_login: "Please log in."
+      user_update: "Profile updated"
+    sessions:
+      error_messages: "Invalid email/password combination"      
   layouts:
     footer:
       announce_footer_html: "The %{tutorial} by %{book}"
@@ -83,9 +87,6 @@ en:
       new:
         email: "Email"
         password: "Password"
-    session:
-        email: "Email"
-        password: "Password"
     application_helper:
       application_info: "Ruby on Rails Tutorial Sample App"
   shared:
@@ -94,6 +95,13 @@ en:
       one: "1 error"
       other: "%{count} errors"
   users:
+    index:
+      index_info: "All users"
+    edit:
+      edit_Edit: "Edit user"
+      edit_Save_changes: "Save changes"
+      edit_Update: "Update your profile"
+      edit_Change: "Change"
     new:
       new_info_title: "Sign up"
       new_info: "Sign up"
@@ -109,3 +117,10 @@ en:
       sign_up_html: "New user? %{href}"
       sign_up_now: "Sign up now!"
       remember_me: "Remember me on this computer"
+      new_lable_name: "Name"
+      new_lable_email: "Email"
+      new_lable_password: "Password"
+      new_lable_password_confirmation: "password_confirmation"
+    users_controller:
+      user_deleted: "users delete"
+      failed: "Error: cannot delete" 
