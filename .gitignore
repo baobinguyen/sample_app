@@ -9,7 +9,8 @@
 !/storage/.keep
 /node_modules
 /yarn-error.log
-/public/assets
+
+/public
 .byebug_history
 /config/master.key
 

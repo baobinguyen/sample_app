@@ -1,17 +1,16 @@
 class User < ApplicationRecord
+  VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i
   attr_accessor :remember_token, :activation_token, :reset_token
-  before_save   :downcase_email
+  before_save :downcase_email
   before_create :create_activation_digest
-  before_save{self.email = email.downcase}
-  validates :name, presence: true, length: {maximum: Settings.user.name_length}
-  VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+  has_secure_password
   validates :email, presence: true,
     length: {maximum: Settings.user.email_length},
-    format: {with: VALID_EMAIL_REGEX},
-    uniqueness: {case_sensitive: false}
-  has_secure_password
+    format: {with: VALID_EMAIL_REGEX}, uniqueness: {case_sensitive: false}
+  validates :name, presence: true, length: {maximum: Settings.user.name_length}
   validates :password, presence: true,
-    length: {minimum: Settings.user.password_length}
+    length: {minimum: Settings.user.password_length}, allow_nil: true
+  has_many :microposts, dependent: :destroy
 
   class << self
     def digest string
@@ -57,12 +56,12 @@ class User < ApplicationRecord
       reset_digest: User.digest(reset_token))
   end
 
-  def send_password_reset_email
-    UserMailer.password_reset(self).deliver_now
-  end
-
   def password_reset_expired?
     reset_sent_at < Settings.user.hourss.hours.ago
+  end
+
+  def send_password_reset_email
+    UserMailer.password_reset(self).deliver_now
   end
 
   private
