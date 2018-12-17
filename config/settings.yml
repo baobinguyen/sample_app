@@ -1,5 +1,6 @@
 user:
   page: 1
+  sizes: 30
   size: 80
   name_length: 50
   email_length: 255

@@ -30,6 +30,8 @@ en:
       users_login: "Please log in."
       user_update: "Profile updated"
       user_check: "Please check your email to activate your account."
+      user_flow: "Following"
+      user_fows: "Followers"
     sessions:
       error_messages: "Invalid email/password combination"
       inactivated: "Account not activated. Check your email for the activation link."
@@ -48,11 +50,6 @@ your password will stay as it is."
       reset_update: "can't be empty"
       reset_update_flast: "Password has been reset."
       reset_check_expiration: "Password reset has expired."
-  mailers:
-    user:
-      account_activation: "Account activation"
-      password_reset: "Password reset"
-      hi: "Hi"
   layouts:
     footer:
       announce_footer_html: "The %{tutorial} by %{book}"
@@ -141,13 +138,8 @@ your password will stay as it is."
         password: "Password"
         forgot_password: "(forgot password)"
       application_info: "Ruby on Rails Tutorial Sample App"
-  user_mailer:
-    user: "user #password_reset"
-    Activate: "Activate"
-    title: "Sample App"
-    hi: "Hi"
-    welcom: "Welcome to the Sample App! Click on the link below to activate your account:"
   shared:
+    followers: "followers"
     picture_type: "image/jpeg,image/gif,image/png"
     user_info_post: "Post"
     user_info_profile: "view my profile"
@@ -161,6 +153,12 @@ your password will stay as it is."
     user:
       sure: "You sure?"
       delete_linkto: "delete"
+    show_follow:
+      microposts: "Microposts"
+      show: "view my profile"
+    follow:
+      follow_Follow: "Follow"
+      unfollow: "Unfollow"
     index:
       index_info: "All users"
     edit:
@@ -189,6 +187,12 @@ your password will stay as it is."
       new_lable_email: "Email"
       new_lable_password: "Password"
       new_lable_password_confirmation: "password_confirmation"
+  mailers:
+    user_mailer:
+      account_activation:
+        activation: "Account activation"
+      password_reset:
+        reset: "Password reset"
   user_mailer:
     email_send: "Email sent with password reset instructions"
     email_not_found: "Email address not found"
@@ -202,12 +206,23 @@ your password will stay as it is."
     reset_update_flast: "Password has been reset."
     reset_check_expiration: "Password reset has expired."
     account_reset:
-     password_reset_info: "To reset your password click the link below:"
-     password_reset_info_2: "This link will expire in two hours."
-     password_reset_info_3: "If you did not request your password to be reset, please ignore this email and
+      password_reset_info: "To reset your password click the link below:"
+      password_reset_info_2: "This link will expire in two hours."
+      password_reset_info_3: "If you did not request your password to be reset, please ignore this email and
 your password will stay as it is."
     account_activation:
       Activate: "Activate"
       title: "Sample App"
       hi: "Hi"
       welcom: "Welcome to the Sample App! Click on the link below to activate your account:"
+    password_reset:
+      reset: "Reset password"
+      expire: "This link will expire in two hours."
+      content: "If you did not request your password to be reset, please ignore this email and
+your password will stay as it is."
+      reset_title: "Password reset"
+      reset_info: "To reset your password click the link below:"  
+      reset_password: "Reset password"
+      reset_info_1: "This link will expire in two hours."
+      reset_info_2: "If you did not request your password to be reset, please ignore this email and
+your password will stay as it is."
